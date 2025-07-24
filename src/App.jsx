@@ -1,11 +1,11 @@
 import './App.css'
-import { Button } from './components/ui/button'
+import AppRoutes from './routes/AppRoutes'
 
 function App() {
   return (
-    <div>
-      <Button className='text-primary-600'>Nguyen Xuan Sang</Button>
-    </div>
+    <>
+      <AppRoutes />
+    </>
   )
 }
 
