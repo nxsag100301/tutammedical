@@ -1,58 +1,19 @@
-import React from 'react'
-import { IoMdMenu } from 'react-icons/io'
-import { Sheet, SheetTrigger, SheetContent } from '@/components/ui/sheet'
+import { useNavigate } from 'react-router-dom'
+import MenuDesktop from './components/MenuDesktop'
+import MenuMobile from './components/MenuMobile'
 
 const Navbar = () => {
+  const navigate = useNavigate()
+
   return (
-    <div className='max-w-screen-2xl mx-auto px-6 lg:px-20 h-[76px] flex items-center justify-between'>
-      <div className='text-xl font-bold'>logo</div>
-
-      {/* Menu desktop */}
-      <div className='hidden md:flex flex-row md:gap-6 lg:gap-8'>
-        <span className='cursor-pointer text-primary-400 text-sm xl:text-base'>
-          Giới thiệu
-        </span>
-        <span className='cursor-pointer text-primary-400 text-sm xl:text-base'>
-          Phòng khám đa khoa
-        </span>
-        <span className='cursor-pointer text-primary-400 text-sm xl:text-base'>
-          ... gia đình
-        </span>
-        <span className='cursor-pointer text-primary-400 text-sm xl:text-base'>
-          Nhà thuốc gần đây
-        </span>
-        <span className='cursor-pointer text-primary-400 text-sm xl:text-base'>
-          Viện Đông Nam Dược
-        </span>
-      </div>
-
-      {/* Icon menu mobile */}
-      <div className='md:hidden'>
-        <Sheet>
-          <SheetTrigger>
-            <IoMdMenu className='text-3xl text-primary-600' />
-          </SheetTrigger>
-          <SheetContent side='right'>
-            <div className='flex flex-col gap-4 p-4 pt-14'>
-              <span className='cursor-pointer text-primary-600'>
-                Giới thiệu
-              </span>
-              <span className='cursor-pointer text-primary-600'>
-                Phòng khám đa khoa
-              </span>
-              <span className='cursor-pointer text-primary-600'>
-                ... gia đình
-              </span>
-              <span className='cursor-pointer text-primary-600'>
-                Nhà thuốc gần đây
-              </span>
-              <span className='cursor-pointer text-primary-600'>
-                Viện Đông Nam Dược
-              </span>
-            </div>
-          </SheetContent>
-        </Sheet>
-      </div>
+    <div className='max-w-screen-2xl mx-auto px-6 lg:px-20 h-[76px] flex items-center justify-between gap-4'>
+      <img
+        src='/images/tutamlogo2.jpg'
+        className='h-[45px] w-[45px] sm:h-[50px] sm:w-[50px] md:h-[55px] md:w-[55px] cursor-pointer'
+        onClick={() => navigate('/')}
+      />
+      <MenuDesktop />
+      <MenuMobile />
     </div>
   )
 }
