@@ -23,16 +23,17 @@ const Footer = () => {
         {/* Thông tin liên hệ */}
         <div className='space-y-3 px-4 sm:px-6'>
           <p className='text-xl font-semibold'>Thông tin liên hệ</p>
-          <p className='font-semibold'>Từ Tâm Medical</p>
+          <p className='font-semibold'>Từ Tâm Medical Global</p>
           <div>
-            <span className='font-semibold'>Email:</span> nxsag100301@gmail.com
+            <span className='font-semibold'>Email:</span>{' '}
+            pkquockhanh120@gmail.com
           </div>
           <div>
-            <span className='font-semibold'>Điện thoại:</span> 0773482059
+            <span className='font-semibold'>Điện thoại:</span> 0923233369
           </div>
           <div>
-            <span className='font-semibold'>Địa chỉ:</span> 78/14 Nguyễn Thị Tú
-            - P. Bình Hưng Hòa B - Q. Bình Tân - Tp. HCM
+            <span className='font-semibold'>Địa chỉ:</span> 120/2B Phan Văn Hớn,
+            xã Bà Điểm, huyện Hóc Môn, Tp Hồ Chí Minh
           </div>
         </div>
 
