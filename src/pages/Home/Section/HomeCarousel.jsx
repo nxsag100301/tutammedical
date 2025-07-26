@@ -10,9 +10,9 @@ import { cn } from '@/lib/utils'
 import Autoplay from 'embla-carousel-autoplay'
 
 const items = [
-  '/images/banner1.png',
-  '/images/banner2.png',
-  '/images/banner3.png'
+  '/images/banner1.jpg',
+  '/images/banner2.jpg',
+  '/images/banner3.jpg'
 ]
 
 const HomeCarousel = () => {
