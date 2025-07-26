@@ -33,7 +33,7 @@ const HomeCarousel = () => {
   }, [api])
 
   return (
-    <div className='max-w-screen-2xl mx-auto px-6 lg:px-20'>
+    <div className='mx-auto'>
       <Carousel
         className='w-full'
         opts={{ loop: true }}
