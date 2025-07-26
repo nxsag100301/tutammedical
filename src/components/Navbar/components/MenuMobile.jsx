@@ -63,7 +63,14 @@ const MenuMobile = () => {
 
             <span className='cursor-pointer'>Y học gia đình</span>
             <span className='cursor-pointer'>Nhà thuốc gần đây</span>
-            <span className='cursor-pointer'>Viện Đông Nam Dược</span>
+            <span
+              className='cursor-pointer'
+              onClick={() =>
+                (window.location.href = 'https://viendongyvietnam.com/')
+              }
+            >
+              Viện Đông Nam Dược
+            </span>
 
             <span
               className='cursor-pointer'
