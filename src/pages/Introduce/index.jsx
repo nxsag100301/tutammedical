@@ -2,7 +2,7 @@ import React from 'react'
 
 const Introduce = () => {
   return (
-    <div className='max-w-screen-2xl mx-auto px-6 lg:px-20 my-8'>
+    <div className='px-6 lg:px-20 my-8'>
       <div className='text-center font-bold text-2xl mb-4'>
         TẬP ĐOÀN Y KHOA QUỐC TẾ TỪ TÂM: BẢN GIAO HƯỞNG CỦA TRI THỨC VÀ LÒNG TRẮC
         ẨN
