@@ -2,7 +2,7 @@ import React from 'react'
 
 const Introduce = () => {
   return (
-    <div className='flex flex-col md:flex-row gap-4 md:gap-0 max-w-screen-2xl mx-auto px-6 lg:px-20 mt-6 md:mt-10'>
+    <div className='flex flex-col md:flex-row gap-4 md:gap-0 px-6 lg:px-20 mt-6 md:mt-10'>
       <div className='w-[100%] md:w-[55%]'>
         <iframe
           className='w-[100%] h-[300px] sm:h-[360px] md:h-[460px]'
