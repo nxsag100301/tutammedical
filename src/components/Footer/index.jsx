@@ -25,8 +25,7 @@ const Footer = () => {
           <p className='text-xl font-semibold'>Thông tin liên hệ</p>
           <p className='font-semibold'>Từ Tâm Medical Global</p>
           <div>
-            <span className='font-semibold'>Email:</span>{' '}
-            pkquockhanh120@gmail.com
+            <span className='font-semibold'>Email:</span> tutammedical@gmail.com
           </div>
           <div>
             <span className='font-semibold'>Hotline:</span> 1900 8679
