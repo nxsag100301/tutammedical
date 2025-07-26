@@ -11,9 +11,12 @@ const MenuDesktop = () => {
   const navigate = useNavigate()
 
   return (
-    <Menubar className='hidden md:flex gap-2 text-primary-600 font-semibold text-sm 2xl:text-base border-none shadow-none bg-transparent'>
+    <Menubar className='hidden lg:flex gap-2 text-primary-600 font-semibold text-sm 2xl:text-base border-none shadow-none bg-transparent'>
       <MenubarMenu>
-        <MenubarTrigger className='cursor-pointer bg-transparent'>
+        <MenubarTrigger
+          className='cursor-pointer bg-transparent'
+          onClick={() => navigate('/introduce')}
+        >
           Giới thiệu
         </MenubarTrigger>
       </MenubarMenu>
@@ -23,12 +26,14 @@ const MenuDesktop = () => {
           Phòng khám Đa Khoa
         </MenubarTrigger>
         <MenubarContent>
-          <MenubarItem onClick={() => navigate('/phong-kham-quoc-khanh')}>
+          <MenubarItem
+          // onClick={() =>
+          //   (window.location.href = 'https://viendongyvietnam.com/')
+          // }
+          >
             Hệ thống phòng khám Đa Khoa Quốc Khanh
           </MenubarItem>
-          <MenubarItem onClick={() => navigate('/phong-kham-tu-tam')}>
-            Hệ thống phòng khám Đa Khoa Từ Tâm
-          </MenubarItem>
+          <MenubarItem>Hệ thống phòng khám Đa Khoa Từ Tâm</MenubarItem>
         </MenubarContent>
       </MenubarMenu>
 
@@ -45,7 +50,12 @@ const MenuDesktop = () => {
       </MenubarMenu>
 
       <MenubarMenu>
-        <MenubarTrigger className='cursor-pointer bg-transparent'>
+        <MenubarTrigger
+          className='cursor-pointer bg-transparent'
+          onClick={() =>
+            (window.location.href = 'https://viendongyvietnam.com/')
+          }
+        >
           Viện Đông Nam Dược
         </MenubarTrigger>
       </MenubarMenu>
@@ -54,6 +64,24 @@ const MenuDesktop = () => {
         <MenubarTrigger className='cursor-pointer bg-transparent'>
           Cộng đồng Từ Tâm
         </MenubarTrigger>
+      </MenubarMenu>
+
+      <MenubarMenu>
+        <MenubarTrigger className='cursor-pointer bg-transparent'>
+          Dược phẩm Từ Tâm
+        </MenubarTrigger>
+        <MenubarContent>
+          <MenubarItem
+            onClick={() => (window.location.href = 'https://thienyphuc.vn')}
+          >
+            Công ty cổ phần Dược phẩm Thiên Y Phúc
+          </MenubarItem>
+          <MenubarItem
+            onClick={() => (window.location.href = 'https://agk.com.vn')}
+          >
+            Công ty cổ phần đầu tư Anh Gia Khánh
+          </MenubarItem>
+        </MenubarContent>
       </MenubarMenu>
 
       <MenubarMenu>

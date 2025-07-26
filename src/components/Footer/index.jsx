@@ -29,11 +29,11 @@ const Footer = () => {
             pkquockhanh120@gmail.com
           </div>
           <div>
-            <span className='font-semibold'>Điện thoại:</span> 0923233369
+            <span className='font-semibold'>Hotline:</span> 1900 8679
           </div>
           <div>
-            <span className='font-semibold'>Địa chỉ:</span> 120/2B Phan Văn Hớn,
-            xã Bà Điểm, huyện Hóc Môn, Tp Hồ Chí Minh
+            <span className='font-semibold'>Văn phòng đại diện:</span> 120/2B
+            Phan Văn Hớn, xã Bà Điểm, huyện Hóc Môn, Tp Hồ Chí Minh
           </div>
         </div>
 
@@ -44,6 +44,14 @@ const Footer = () => {
             <SiZalo className='h-9 w-9 border p-2 rounded-sm cursor-pointer' />
             <FaFacebook className='h-9 w-9 cursor-pointer' />
             <FaGoogle className='h-9 w-9 cursor-pointer' />
+          </div>
+          <div>
+            <span className='font-semibold'>Chi nhánh 1:</span> 1170 - 1174 Kha
+            Vạn Cân, Phường Linh Xuân, Thành phố Hồ Chí Minh
+          </div>
+          <div>
+            <span className='font-semibold'>Chi nhánh 2:</span> 732 - 738 Lê Đức
+            Thọ, Phường An Hội Đông, Thành phố Hồ Chí Minh
           </div>
         </div>
       </div>
