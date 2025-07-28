@@ -27,16 +27,16 @@ const MenuDesktop = () => {
           children: [
             {
               title: 'Từ Tâm mà Khởi ý - Nguồn gốc của Tầm nhìn',
-              id: 'tutamkhoiy'
+              url: '/tutamkhoiy'
             },
             {
               title: 'Từ Tâm mà Thực hiện - Con đường tới Mục tiêu',
-              id: 'tutamthuchien'
+              url: '/tutamthuchien'
             },
             {
               title:
                 'Từ Tâm mới Thành tựu - Ý nghĩa của Sự thành công đích thực',
-              id: 'tutamthanhtuu'
+              url: '/tutamthanhtuu'
             }
           ]
         },
@@ -44,10 +44,16 @@ const MenuDesktop = () => {
           groupTitle: 'Giáo dục truyền thống',
           url: '/educationtraditional',
           children: [
-            { title: 'Y tế Từ Tâm - Nâng tầm Sức khoẻ', id: 'ytetutam' },
-            { title: 'Điều trị Từ Tâm - Nâng tầm Y Đức', id: 'dieutritutam' },
-            { title: 'Chăm sóc Từ Tâm - Nâng tầm Giá trị', id: 'chamsoctutam' },
-            { title: 'Cộng đồng Từ Tâm - Nâng tầm Lan toả', id: 'condongtutam' }
+            { title: 'Y tế Từ Tâm - Nâng tầm Sức khoẻ', url: '/ytetutam' },
+            { title: 'Điều trị Từ Tâm - Nâng tầm Y Đức', url: '/dieutritutam' },
+            {
+              title: 'Chăm sóc Từ Tâm - Nâng tầm Giá trị',
+              url: '/chamsoctutam'
+            },
+            {
+              title: 'Cộng đồng Từ Tâm - Nâng tầm Lan toả',
+              url: '/congdongtutam'
+            }
           ]
         }
       ]
@@ -177,6 +183,7 @@ const MenuDesktop = () => {
           <DropdownContent
             columnData={tutamPharmaceutical}
             flexDirection='column'
+            image={'/images/medic.jpg'}
           />
         </MenubarContent>
       </MenubarMenu>

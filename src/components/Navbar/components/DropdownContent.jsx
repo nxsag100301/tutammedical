@@ -10,10 +10,6 @@ const Column = ({
 }) => {
   const navigate = useNavigate()
 
-  const handleScrollToId = (url, id) => {
-    navigate(`${url}#${id}`)
-  }
-
   if (columnGroups) {
     return (
       <div className='space-y-4'>
@@ -32,11 +28,7 @@ const Column = ({
                 <div
                   key={index}
                   className='px-5 py-1 rounded-md cursor-pointer hover:bg-primary-100'
-                  onClick={() =>
-                    group.url && item.id
-                      ? handleScrollToId(group.url, item.id)
-                      : undefined
-                  }
+                  onClick={() => (item.url ? navigate(item.url) : undefined)}
                 >
                   {item.title}
                 </div>
@@ -84,7 +76,7 @@ const Column = ({
 
 const DropdownContent = ({ columnData, flexDirection, image }) => {
   return (
-    <div className='flex flex-row gap-6'>
+    <div className='flex flex-row gap-6 min-w-[800px] justify-between'>
       <div
         className={`flex ${
           flexDirection === 'column' ? 'flex-col' : 'flex-row'
@@ -102,7 +94,7 @@ const DropdownContent = ({ columnData, flexDirection, image }) => {
         ))}
       </div>
       {image && (
-        <img src={image} className='w-[300px] h-[200px] rounded-md m-4' />
+        <img src={image} className='w-[50%] max-h-[300px] rounded-md m-4' />
       )}
     </div>
   )

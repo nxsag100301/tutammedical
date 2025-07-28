@@ -7,8 +7,15 @@ import Vision from '@/pages/Introduce/Child/Vision'
 import Mission from '@/pages/Introduce/Child/Mission'
 import CoreValues from '@/pages/Introduce/Child/CoreValues'
 import WhyChooseWe from '@/pages/Introduce/Child/WhyChooseWe'
-import InspirationOrigin from '@/pages/Introduce/Child/InspirationOrigin'
-import EducationTraditional from '@/pages/Introduce/Child/EducationTraditional'
+import InspirationOrigin from '@/pages/InspirationOrigin'
+import EducationTraditional from '@/pages/EducationTraditional'
+import ChamSocTuTam from '@/pages/EducationTraditional/Child/ChamSocTuTam'
+import CongDongTuTam from '@/pages/EducationTraditional/Child/CongDongTuTam'
+import DieuTriTuTam from '@/pages/EducationTraditional/Child/DieuTriTuTam'
+import YTeTuTam from '@/pages/EducationTraditional/Child/YTeTuTam'
+import TuTamKhoiY from '@/pages/InspirationOrigin/Child/TuTamKhoiY'
+import TuTamThanhTuu from '@/pages/InspirationOrigin/Child/TuTamThanhTuu'
+import TuTamThucHien from '@/pages/InspirationOrigin/Child/TuTamThucHien'
 
 const AppRoutes = () => {
   return (
@@ -24,6 +31,13 @@ const AppRoutes = () => {
       <Route path='/whychoosewe' element={<WhyChooseWe />} />
       <Route path='/inspirationrigin' element={<InspirationOrigin />} />
       <Route path='/educationtraditional' element={<EducationTraditional />} />
+      <Route path='/chamsoctutam' element={<ChamSocTuTam />} />
+      <Route path='/congdongtutam' element={<CongDongTuTam />} />
+      <Route path='/dieutritutam' element={<DieuTriTuTam />} />
+      <Route path='/ytetutam' element={<YTeTuTam />} />
+      <Route path='/tutamkhoiy' element={<TuTamKhoiY />} />
+      <Route path='/tutamthanhtuu' element={<TuTamThanhTuu />} />
+      <Route path='/tutamthuchien' element={<TuTamThucHien />} />
 
       <Route element={<PrivateRoute />}>
         {/* Thêm private route vào đây */}
