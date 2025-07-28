@@ -2,8 +2,7 @@ import {
   Menubar,
   MenubarMenu,
   MenubarTrigger,
-  MenubarContent,
-  MenubarItem
+  MenubarContent
 } from '@/components/ui/menubar'
 import DropdownContent from './DropdownContent'
 
@@ -13,85 +12,92 @@ const MenuDesktop = () => {
       columnTitle: 'Giới thiệu',
       url: '/introduce',
       children: [
-        {
-          title: 'Chúng tôi là ai'
-        },
-        { title: 'Giá trị cốt lõi' }
+        { title: 'Chúng tôi là ai?' },
+        { title: 'Tầm nhìn' },
+        { title: 'Sứ mệnh' },
+        { title: 'Giá trị cốt lõi' },
+        { title: 'Tại sao lại chọn Từ Tâm Medical?' }
       ]
     },
     {
-      columnTitle: 'Khởi nguồn cảm hứng',
-      children: [
+      columnGroups: [
         {
-          title: 'Khởi nguồn cảm hứng 1'
+          groupTitle: 'Khởi nguồn cảm hứng',
+          children: [
+            { title: 'Từ Tâm mà Khởi ý - Nguồn gốc của Tầm nhìn' },
+            { title: 'Từ Tâm mà Thực hiện - Con đường tới Mục tiêu' },
+            {
+              title:
+                'Từ Tâm mới Thành tựu - Ý nghĩa của Sự thành công đích thực'
+            }
+          ]
         },
-        { title: 'Khởi nguồn cảm hứng 2' }
+        {
+          groupTitle: 'Giáo dục truyền thống',
+          children: [
+            { title: 'Y tế Từ Tâm - Nâng tầm Sức khoẻ' },
+            { title: 'Điều trị Từ Tâm - Nâng tầm Y Đức' },
+            { title: 'Chăm sóc Từ Tâm - Nâng tầm Giá trị' },
+            { title: 'Cộng đồng Từ Tâm - Nâng tầm Lan toả' }
+          ]
+        }
       ]
     },
     {
-      columnTitle: 'Giáo dục tryền thống',
-      children: [
-        {
-          title: 'Giáo dục tryền thống 1'
-        },
-        { title: 'Giáo dục tryền thống 2' }
-      ]
+      columnTitle: 'Cơ cấu tổ chức',
+      children: []
     }
   ]
 
   const multidisciplinarySystemColumn = [
     {
-      columnTitle: 'Hệ thống đa khoa',
+      columnTitle: 'Phòng khám Đa Khoa Quốc Khanh',
       url: '',
       children: [
         {
-          title: 'Phòng khám Đa Khoa Quốc Khanh'
+          title: 'Dịch vụ khám bệnh'
         },
-        { title: 'Phòng khám Đa Khoa Từ Tâm' }
+        { title: 'Đội ngũ  y bác sĩ' },
+        { title: 'Công nghệ - trang thiết bị' }
       ]
     },
     {
-      columnTitle: 'Dịch vụ',
+      columnTitle: 'Phòng khám Đa Khoa Từ Tâm',
       url: '',
       children: [
         {
-          title: 'Dịch vụ 1'
+          title: 'Dịch vụ khám bệnh'
         },
-        { title: 'Dịch vụ 2' }
-      ]
-    },
-    {
-      columnTitle: 'Đội ngũ y bác sĩ',
-      children: [
-        {
-          title: 'Đội ngũ y bác sĩ 1'
-        },
-        { title: 'Đội ngũ y bác sĩ 2' }
-      ]
-    },
-    {
-      columnTitle: 'Công nghệ - trang thiết bị',
-      children: [
-        {
-          title: 'Công nghệ - trang thiết bị 1'
-        },
-        { title: 'Công nghệ - trang thiết bị 2' }
+        { title: 'Đội ngũ  y bác sĩ' },
+        { title: 'Công nghệ - trang thiết bị' }
       ]
     }
   ]
 
   const tutamComunityColumn = [
     {
-      columnTitle: 'Hoạt động cộng đồng',
-      children: [
-        {
-          title: 'Hoạt động cộng đồng 1'
-        },
-        { title: 'Hoạt động cộng đồng 2' }
-      ]
+      columnTitle: 'Hoạt động Từ Tâm'
+      // children: [
+      //   {
+      //     title: 'Hoạt động Từ Tâm 1'
+      //   },
+      //   { title: 'Hoạt động Từ Tâm 2' }
+      // ]
     },
     {
       columnTitle: 'Góc ảnh Từ Tâm'
+    },
+    {
+      columnTitle: 'Cuộc sống Y khoa'
+    },
+    {
+      columnTitle: 'Trải nghiệm Khách hàng'
+    },
+    {
+      columnTitle: 'Cơ sở Từ Tâm'
+    },
+    {
+      columnTitle: 'Tuyển dụng'
     },
     {
       columnTitle: 'Đổi mới công nghệ',
@@ -129,18 +135,13 @@ const MenuDesktop = () => {
           Hệ thống Đa Khoa
         </MenubarTrigger>
         <MenubarContent>
-          <DropdownContent columnData={multidisciplinarySystemColumn} />
+          <DropdownContent
+            columnData={multidisciplinarySystemColumn}
+            flexDirection='column'
+            image={'/images/clinic.jpg'}
+          />
         </MenubarContent>
       </MenubarMenu>
-
-      {/* <MenubarMenu>
-        <MenubarTrigger className='cursor-pointer bg-transparent'>
-          Test dropdown
-        </MenubarTrigger>
-        <MenubarContent>
-          <DropdownContent />
-        </MenubarContent>
-      </MenubarMenu> */}
 
       <MenubarMenu>
         <MenubarTrigger className='cursor-pointer bg-transparent'>
@@ -164,7 +165,10 @@ const MenuDesktop = () => {
           Dược phẩm Từ Tâm
         </MenubarTrigger>
         <MenubarContent>
-          <DropdownContent columnData={tutamPharmaceutical} />
+          <DropdownContent
+            columnData={tutamPharmaceutical}
+            flexDirection='column'
+          />
         </MenubarContent>
       </MenubarMenu>
 
@@ -173,7 +177,11 @@ const MenuDesktop = () => {
           Cộng đồng Từ Tâm
         </MenubarTrigger>
         <MenubarContent>
-          <DropdownContent columnData={tutamComunityColumn} />
+          <DropdownContent
+            columnData={tutamComunityColumn}
+            flexDirection='column'
+            image={'/images/community.jpg'}
+          />
         </MenubarContent>
       </MenubarMenu>
 

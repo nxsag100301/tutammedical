@@ -4,7 +4,7 @@ const NewsCard = ({ id, image, title, subTitle }) => {
   return (
     <div className='rounded-xl shadow-lg border space-y-2 cursor-pointer'>
       <img
-        src='/images/card.webp'
+        src='/images/card.jpg'
         className='h-[220px] w-full object-cover rounded-tl-xl rounded-tr-xl'
       />
       <div className='px-3 space-y-2 pb-4'>
