@@ -12,33 +12,42 @@ const MenuDesktop = () => {
       columnTitle: 'Giới thiệu',
       url: '/introduce',
       children: [
-        { title: 'Chúng tôi là ai?' },
-        { title: 'Tầm nhìn' },
-        { title: 'Sứ mệnh' },
-        { title: 'Giá trị cốt lõi' },
-        { title: 'Tại sao lại chọn Từ Tâm Medical?' }
+        { title: 'Chúng tôi là ai?', url: '/whoweare' },
+        { title: 'Tầm nhìn', url: '/vision' },
+        { title: 'Sứ mệnh', url: '/mission' },
+        { title: 'Giá trị cốt lõi', url: '/corevalues' },
+        { title: 'Tại sao lại chọn Từ Tâm Medical?', url: '/whychoosewe' }
       ]
     },
     {
       columnGroups: [
         {
           groupTitle: 'Khởi nguồn cảm hứng',
+          url: '/inspirationrigin',
           children: [
-            { title: 'Từ Tâm mà Khởi ý - Nguồn gốc của Tầm nhìn' },
-            { title: 'Từ Tâm mà Thực hiện - Con đường tới Mục tiêu' },
+            {
+              title: 'Từ Tâm mà Khởi ý - Nguồn gốc của Tầm nhìn',
+              id: 'tutamkhoiy'
+            },
+            {
+              title: 'Từ Tâm mà Thực hiện - Con đường tới Mục tiêu',
+              id: 'tutamthuchien'
+            },
             {
               title:
-                'Từ Tâm mới Thành tựu - Ý nghĩa của Sự thành công đích thực'
+                'Từ Tâm mới Thành tựu - Ý nghĩa của Sự thành công đích thực',
+              id: 'tutamthanhtuu'
             }
           ]
         },
         {
           groupTitle: 'Giáo dục truyền thống',
+          url: '/educationtraditional',
           children: [
-            { title: 'Y tế Từ Tâm - Nâng tầm Sức khoẻ' },
-            { title: 'Điều trị Từ Tâm - Nâng tầm Y Đức' },
-            { title: 'Chăm sóc Từ Tâm - Nâng tầm Giá trị' },
-            { title: 'Cộng đồng Từ Tâm - Nâng tầm Lan toả' }
+            { title: 'Y tế Từ Tâm - Nâng tầm Sức khoẻ', id: 'ytetutam' },
+            { title: 'Điều trị Từ Tâm - Nâng tầm Y Đức', id: 'dieutritutam' },
+            { title: 'Chăm sóc Từ Tâm - Nâng tầm Giá trị', id: 'chamsoctutam' },
+            { title: 'Cộng đồng Từ Tâm - Nâng tầm Lan toả', id: 'condongtutam' }
           ]
         }
       ]

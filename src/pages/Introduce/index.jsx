@@ -3,7 +3,7 @@ import React from 'react'
 const Introduce = () => {
   return (
     <div className='px-4 md:px-8 lg:px-20 py-8'>
-      <h1 className='text-center font-bold text-2xl lg:text-3xl mb-6 leading-snug'>
+      <h1 className='text-center font-bold text-2xl lg:text-3xl mb-6 leading-snug text-primary-600'>
         TẬP ĐOÀN Y KHOA QUỐC TẾ TỪ TÂM: BẢN GIAO HƯỞNG CỦA TRI THỨC VÀ LÒNG TRẮC
         ẨN
       </h1>

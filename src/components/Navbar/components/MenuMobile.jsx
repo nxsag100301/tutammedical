@@ -35,7 +35,15 @@ const MenuMobile = () => {
         {hasChildren && (
           <ul className='pl-4 space-y-1 text-sm text-primary-600'>
             {item.children.map((child, idx) => (
-              <li key={idx} className='cursor-pointer hover:text-primary-500'>
+              <li
+                key={idx}
+                className='cursor-pointer hover:text-primary-500'
+                onClick={() => {
+                  if (child.url) {
+                    handleNavigate(child.url)
+                  }
+                }}
+              >
                 • {child.title}
               </li>
             ))}
@@ -55,20 +63,14 @@ const MenuMobile = () => {
         return (
           <div key={idx} className='space-y-3'>
             {item.columnGroups.map((group, groupIdx) => (
-              <div key={groupIdx} className='pl-2'>
+              <div
+                key={groupIdx}
+                className='pl-2 cursor-pointer hover:text-primary-500'
+                onClick={() => group.url && handleNavigate(group.url)}
+              >
                 <div className='font-semibold text-primary-700 text-base'>
                   {group.groupTitle}
                 </div>
-                <ul className='pl-4 space-y-1 text-sm text-primary-600'>
-                  {group.children?.map((child, cIdx) => (
-                    <li
-                      key={cIdx}
-                      className='cursor-pointer hover:text-primary-500'
-                    >
-                      • {child.title}
-                    </li>
-                  ))}
-                </ul>
               </div>
             ))}
           </div>
@@ -84,34 +86,22 @@ const MenuMobile = () => {
       columnTitle: 'Giới thiệu',
       url: '/introduce',
       children: [
-        { title: 'Chúng tôi là ai?' },
-        { title: 'Tầm nhìn' },
-        { title: 'Sứ mệnh' },
-        { title: 'Giá trị cốt lõi' },
-        { title: 'Tại sao lại chọn Từ Tâm Medical?' }
+        { title: 'Chúng tôi là ai?', url: '/whoweare' },
+        { title: 'Tầm nhìn', url: '/vision' },
+        { title: 'Sứ mệnh', url: '/mission' },
+        { title: 'Giá trị cốt lõi', url: '/corevalues' },
+        { title: 'Tại sao lại chọn Từ Tâm Medical?', url: '/whychoosewe' }
       ]
     },
     {
       columnGroups: [
         {
           groupTitle: 'Khởi nguồn cảm hứng',
-          children: [
-            { title: 'Từ Tâm mà Khởi ý - Nguồn gốc của Tầm nhìn' },
-            { title: 'Từ Tâm mà Thực hiện - Con đường tới Mục tiêu' },
-            {
-              title:
-                'Từ Tâm mới Thành tựu - Ý nghĩa của Sự thành công đích thực'
-            }
-          ]
+          url: '/inspirationrigin'
         },
         {
           groupTitle: 'Giáo dục truyền thống',
-          children: [
-            { title: 'Y tế Từ Tâm - Nâng tầm Sức khoẻ' },
-            { title: 'Điều trị Từ Tâm - Nâng tầm Y Đức' },
-            { title: 'Chăm sóc Từ Tâm - Nâng tầm Giá trị' },
-            { title: 'Cộng đồng Từ Tâm - Nâng tầm Lan toả' }
-          ]
+          url: '/educationtraditional'
         }
       ]
     },

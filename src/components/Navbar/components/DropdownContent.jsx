@@ -10,13 +10,21 @@ const Column = ({
 }) => {
   const navigate = useNavigate()
 
+  const handleScrollToId = (url, id) => {
+    navigate(`${url}#${id}`)
+  }
+
   if (columnGroups) {
-    // Trường hợp hiển thị nhiều nhóm (group) trong cùng 1 cột
     return (
       <div className='space-y-4'>
         {columnGroups.map((group, idx) => (
           <div key={idx}>
-            <div className='px-2 py-1 font-semibold text-primary-600 text-sm'>
+            <div
+              className={`px-2 py-1 rounded-md font-semibold text-primary-600 text-sm ${
+                group.url ? 'cursor-pointer hover:bg-primary-100' : ''
+              }`}
+              onClick={group.url ? () => navigate(group.url) : undefined}
+            >
               {group.groupTitle}
             </div>
             <div className='space-y-1 text-sm max-w-[280px]'>
@@ -24,6 +32,11 @@ const Column = ({
                 <div
                   key={index}
                   className='px-5 py-1 rounded-md cursor-pointer hover:bg-primary-100'
+                  onClick={() =>
+                    group.url && item.id
+                      ? handleScrollToId(group.url, item.id)
+                      : undefined
+                  }
                 >
                   {item.title}
                 </div>
@@ -59,6 +72,7 @@ const Column = ({
           <div
             key={index}
             className='px-5 py-1 rounded-md cursor-pointer hover:bg-primary-100'
+            onClick={item.url ? () => navigate(item.url) : undefined}
           >
             {item.title}
           </div>
