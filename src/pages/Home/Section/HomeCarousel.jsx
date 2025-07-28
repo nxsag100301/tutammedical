@@ -8,6 +8,7 @@ import {
 } from '@/components/ui/carousel'
 import { cn } from '@/lib/utils'
 import Autoplay from 'embla-carousel-autoplay'
+import Reveal from '@/components/Reveal'
 
 const items = [
   '/images/banner1.jpg',
@@ -34,44 +35,46 @@ const HomeCarousel = () => {
 
   return (
     <div className='mx-auto'>
-      <Carousel
-        className='w-full'
-        opts={{ loop: true }}
-        setApi={setApi}
-        plugins={[Autoplay({ delay: 3000, stopOnInteraction: false })]}
-      >
-        <CarouselContent>
-          {items.map((src, index) => (
-            <CarouselItem
-              key={index}
-              className='relative h-[230px] sm:h-[300px] md:h-[350px] lg:h-[400px] 2xl:h-[450px]'
-            >
-              <img
-                src={src}
-                alt={`Slide ${index + 1}`}
-                className='w-full h-full object-cover'
+      <Reveal initialY={100} delay={0.2}>
+        <Carousel
+          className='w-full'
+          opts={{ loop: true }}
+          setApi={setApi}
+          plugins={[Autoplay({ delay: 3000, stopOnInteraction: false })]}
+        >
+          <CarouselContent>
+            {items.map((src, index) => (
+              <CarouselItem
+                key={index}
+                className='relative h-[230px] sm:h-[300px] md:h-[350px] lg:h-[400px] 2xl:h-[450px]'
+              >
+                <img
+                  src={src}
+                  alt={`Slide ${index + 1}`}
+                  className='w-full h-full object-cover'
+                />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+
+          {/* Arrow buttons (nằm trong ảnh) */}
+          <CarouselPrevious className='left-4 bg-white/70 hover:bg-white' />
+          <CarouselNext className='right-4 bg-white/70 hover:bg-white' />
+
+          {/* Dot indicators */}
+          <div className='absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10'>
+            {items.map((_, index) => (
+              <div
+                key={index}
+                className={cn(
+                  'h-2 w-2 rounded-full bg-white',
+                  index === selectedIndex ? 'opacity-100' : 'opacity-50'
+                )}
               />
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-
-        {/* Arrow buttons (nằm trong ảnh) */}
-        <CarouselPrevious className='left-4 bg-white/70 hover:bg-white' />
-        <CarouselNext className='right-4 bg-white/70 hover:bg-white' />
-
-        {/* Dot indicators */}
-        <div className='absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10'>
-          {items.map((_, index) => (
-            <div
-              key={index}
-              className={cn(
-                'h-2 w-2 rounded-full bg-white',
-                index === selectedIndex ? 'opacity-100' : 'opacity-50'
-              )}
-            />
-          ))}
-        </div>
-      </Carousel>
+            ))}
+          </div>
+        </Carousel>
+      </Reveal>
     </div>
   )
 }
