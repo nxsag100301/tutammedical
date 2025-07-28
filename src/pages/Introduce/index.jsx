@@ -25,6 +25,7 @@ const Introduce = () => {
           quả cuối cùng, rằng mọi nỗ lực đều được định hướng bởi lòng nhân ái,
           sự thấu cảm và trách nhiệm cao nhất.
         </div>
+        <img src='/images/introduce1.jpg' className='' />
         <div>
           Khởi ý Từ Tâm: Nơi tầm nhìn gặp gỡ lòng người Mỗi viên gạch đầu tiên
           của Từ Tâm Medical được đặt xuống không phải từ tham vọng đơn thuần,
@@ -59,6 +60,7 @@ const Introduce = () => {
           trên lợi nhuận, kiến tạo nên một di sản y tế bền vững, vì một tương
           lai khỏe mạnh hơn cho toàn nhân loại.
         </div>
+        <img src='/images/introduce2.jpg' className='' />
         <div>
           Tại Tập đoàn Y khoa Quốc tế Từ Tâm, chúng tôi tin rằng sứ mệnh của
           mình không chỉ là chữa bệnh, mà là nâng niu sự sống, thắp sáng hy

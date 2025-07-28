@@ -44,7 +44,7 @@ const HomeCarousel = () => {
           {items.map((src, index) => (
             <CarouselItem
               key={index}
-              className='relative h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] 2xl:h-[400px]'
+              className='relative h-[230px] sm:h-[300px] md:h-[350px] lg:h-[400px] 2xl:h-[450px]'
             >
               <img
                 src={src}
