@@ -1,12 +1,10 @@
-import {
-  Menubar,
-  MenubarMenu,
-  MenubarTrigger,
-  MenubarContent
-} from '@/components/ui/menubar'
+import React, { useState } from 'react'
+import { Menubar, MenubarMenu, MenubarTrigger } from '@/components/ui/menubar'
 import DropdownContent from './DropdownContent'
 
 const MenuDesktop = () => {
+  const [activeMenu, setActiveMenu] = useState(null)
+
   const introduceColumn = [
     {
       columnTitle: 'Giới thiệu',
@@ -132,81 +130,103 @@ const MenuDesktop = () => {
   ]
 
   return (
-    <Menubar className='hidden lg:flex gap-2 text-primary-600 font-semibold text-sm 2xl:text-base border-none shadow-none bg-transparent'>
-      <MenubarMenu>
-        <MenubarTrigger
-          className='cursor-pointer bg-transparent'
-          // onClick={() => navigate('/introduce')}
+    <div className='relative' onMouseLeave={() => setActiveMenu(null)}>
+      <Menubar className='hidden lg:flex gap-2 text-primary-600 font-semibold text-sm 2xl:text-base border-none shadow-none bg-transparent'>
+        <MenubarMenu>
+          <MenubarTrigger
+            className='cursor-pointer bg-transparent'
+            onMouseEnter={() => setActiveMenu('introduce')}
+          >
+            Giới thiệu
+          </MenubarTrigger>
+        </MenubarMenu>
+
+        <MenubarMenu>
+          <MenubarTrigger
+            className='cursor-pointer bg-transparent'
+            onMouseEnter={() => setActiveMenu('multidisciplinary')}
+          >
+            Hệ thống Đa Khoa
+          </MenubarTrigger>
+        </MenubarMenu>
+
+        <MenubarMenu>
+          <MenubarTrigger
+            className='cursor-pointer bg-transparent'
+            onMouseEnter={() => setActiveMenu('recent')}
+          >
+            Hệ thống gần đây
+          </MenubarTrigger>
+        </MenubarMenu>
+
+        <MenubarMenu>
+          <MenubarTrigger
+            className='cursor-pointer bg-transparent'
+            onClick={() =>
+              (window.location.href = 'https://viendongyvietnam.com/')
+            }
+          >
+            Viện Đông Nam Dược Việt Nam
+          </MenubarTrigger>
+        </MenubarMenu>
+
+        <MenubarMenu>
+          <MenubarTrigger
+            className='cursor-pointer bg-transparent'
+            onMouseEnter={() => setActiveMenu('pharma')}
+          >
+            Dược phẩm Từ Tâm
+          </MenubarTrigger>
+        </MenubarMenu>
+
+        <MenubarMenu>
+          <MenubarTrigger
+            className='cursor-pointer bg-transparent'
+            onMouseEnter={() => setActiveMenu('community')}
+          >
+            Cộng đồng Từ Tâm
+          </MenubarTrigger>
+        </MenubarMenu>
+
+        <MenubarMenu>
+          <MenubarTrigger className='cursor-pointer bg-transparent'>
+            Đặt lịch
+          </MenubarTrigger>
+        </MenubarMenu>
+      </Menubar>
+
+      {activeMenu && (
+        <div
+          className='absolute left-0 top-full w-full bg-white z-50 shadow-md rounded-lg p-4'
+          onMouseLeave={() => setActiveMenu(null)}
         >
-          Giới thiệu
-        </MenubarTrigger>
-        <MenubarContent>
-          <DropdownContent columnData={introduceColumn} />
-        </MenubarContent>
-      </MenubarMenu>
-
-      <MenubarMenu>
-        <MenubarTrigger className='cursor-pointer bg-transparent'>
-          Hệ thống Đa Khoa
-        </MenubarTrigger>
-        <MenubarContent>
-          <DropdownContent
-            columnData={multidisciplinarySystemColumn}
-            flexDirection='column'
-            image={'/images/clinic.jpg'}
-          />
-        </MenubarContent>
-      </MenubarMenu>
-
-      <MenubarMenu>
-        <MenubarTrigger className='cursor-pointer bg-transparent'>
-          Hệ thống gần đây
-        </MenubarTrigger>
-      </MenubarMenu>
-
-      <MenubarMenu>
-        <MenubarTrigger
-          className='cursor-pointer bg-transparent'
-          onClick={() =>
-            (window.location.href = 'https://viendongyvietnam.com/')
-          }
-        >
-          Viện Đông Nam Dược Việt Nam
-        </MenubarTrigger>
-      </MenubarMenu>
-
-      <MenubarMenu>
-        <MenubarTrigger className='cursor-pointer bg-transparent'>
-          Dược phẩm Từ Tâm
-        </MenubarTrigger>
-        <MenubarContent>
-          <DropdownContent
-            columnData={tutamPharmaceutical}
-            flexDirection='column'
-            image={'/images/medic.jpg'}
-          />
-        </MenubarContent>
-      </MenubarMenu>
-
-      <MenubarMenu>
-        <MenubarTrigger className='cursor-pointer bg-transparent'>
-          Cộng đồng Từ Tâm
-        </MenubarTrigger>
-        <MenubarContent>
-          <DropdownContent
-            columnData={tutamComunityColumn}
-            flexDirection='column'
-            image={'/images/community.jpg'}
-          />
-        </MenubarContent>
-      </MenubarMenu>
-
-      <MenubarMenu>
-        <MenubarTrigger className='cursor-pointer bg-transparent'>
-          Đặt lịch
-        </MenubarTrigger>
-      </MenubarMenu>
-    </Menubar>
+          {activeMenu === 'introduce' && (
+            <DropdownContent columnData={introduceColumn} />
+          )}
+          {activeMenu === 'multidisciplinary' && (
+            <DropdownContent
+              columnData={multidisciplinarySystemColumn}
+              flexDirection='column'
+              image='/images/clinic.jpg'
+            />
+          )}
+          {activeMenu === 'pharma' && (
+            <DropdownContent
+              columnData={tutamPharmaceutical}
+              flexDirection='column'
+              image='/images/medic.jpg'
+            />
+          )}
+          {activeMenu === 'community' && (
+            <DropdownContent
+              columnData={tutamComunityColumn}
+              flexDirection='column'
+              image='/images/community.jpg'
+            />
+          )}
+        </div>
+      )}
+    </div>
   )
 }
 

@@ -12,7 +12,7 @@ const Column = ({
 
   if (columnGroups) {
     return (
-      <div className='space-y-4'>
+      <div className='space-y-4 min-w-[300px]'>
         {columnGroups.map((group, idx) => (
           <div key={idx}>
             <div
@@ -42,7 +42,7 @@ const Column = ({
 
   // Trường hợp hiển thị cột bình thường
   return (
-    <div className=''>
+    <div className='min-w-[300px]'>
       <div
         className={`px-2 py-1 rounded-md font-semibold text-primary-600 text-sm ${
           columnUrl || columnOpenUrl
@@ -76,7 +76,7 @@ const Column = ({
 
 const DropdownContent = ({ columnData, flexDirection, image }) => {
   return (
-    <div className='flex flex-row gap-6 min-w-[800px] justify-between'>
+    <div className='flex flex-row gap-6 min-w-[800px] justify-between '>
       <div
         className={`flex ${
           flexDirection === 'column' ? 'flex-col' : 'flex-row'
