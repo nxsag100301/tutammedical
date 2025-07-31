@@ -9,53 +9,56 @@ const ListPage = ({ columnData }) => {
           <div key={colIndex}>
             {/* Column Title có url nội bộ */}
             {col.url && (
-              <Link
-                to={col.url}
-                className='font-bold text-base md:text-lg mb-2 inline-block hover:underline'
-              >
-                {col.columnTitle}
-              </Link>
+              <h3 className='font-bold text-base md:text-lg mb-2'>
+                <Link to={col.url} className='hover:underline'>
+                  {col.columnTitle}
+                </Link>
+              </h3>
             )}
 
             {/* Column Title có url ngoài */}
             {col.openUrl && (
-              <a
-                href={col.openUrl}
-                rel='noopener noreferrer'
-                className='font-bold text-base md:text-lg mb-2 inline-block hover:underline'
-              >
-                {col.columnTitle}
-              </a>
+              <h3 className='font-bold text-base md:text-lg mb-2'>
+                <a
+                  href={col.openUrl}
+                  rel='noopener noreferrer'
+                  className='hover:underline'
+                >
+                  {col.columnTitle}
+                </a>
+              </h3>
             )}
 
             {/* Column Title không có url */}
             {!col.url && !col.openUrl && col.columnTitle && (
-              <div className='font-bold text-base md:text-lg mb-2'>
+              <h3 className='font-bold text-base md:text-lg mb-2'>
                 {col.columnTitle}
-              </div>
+              </h3>
             )}
 
             {/* Nếu có nhóm con (groupTitle) */}
             {col.columnGroups?.map((group, groupIndex) => (
               <div key={groupIndex} className='mb-4'>
-                <div className='font-bold text-base md:text-lg mb-2'>
+                <h3 className='font-bold text-base md:text-lg mb-2'>
                   <Link
                     to={group.url || '#'}
                     className='hover:underline inline-block'
                   >
                     {group.groupTitle}
                   </Link>
-                </div>
+                </h3>
                 <ul className='mt-1 space-y-1'>
                   {group.children?.map((child, childIndex) => (
-                    <li key={childIndex}>
-                      <Link
-                        to={child.url || '#'}
-                        className='hover:underline inline-block'
-                      >
-                        {child.title}
-                      </Link>
-                    </li>
+                    <h4>
+                      <li key={childIndex}>
+                        <Link
+                          to={child.url || '#'}
+                          className='hover:underline inline-block'
+                        >
+                          {child.title}
+                        </Link>
+                      </li>
+                    </h4>
                   ))}
                 </ul>
               </div>

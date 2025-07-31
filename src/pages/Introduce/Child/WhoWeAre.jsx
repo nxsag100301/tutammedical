@@ -13,12 +13,13 @@ const WhoWeAre = () => {
       <CustomBreadcrumb data={breadcrumbData} />
       <Reveal initialY={50} delay={0.2}>
         <div className='px-6 lg:px-20 my-8 space-y-4'>
-          <div className='font-bold text-2xl uppercase text-center text-primary-600'>
+          <h1 className='font-bold text-2xl uppercase text-center text-primary-600'>
             Chúng tôi là ai?
-          </div>
+          </h1>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
             <div className='text-justify space-y-2'>
               <div>
+                <h2 className='sr-only'>Từ Tâm</h2>
                 <strong>Từ Tâm</strong> - không chỉ là tên của Tập đoàn Y khoa
                 Quốc tế sáng lập nên dự án này, mà còn là kim chỉ nam cho mọi
                 hoạt động của chúng tôi. Với tâm niệm “làm y bằng cái tâm trong

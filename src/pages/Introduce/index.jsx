@@ -52,6 +52,7 @@ const Introduce = () => {
             {/* Block 2 */}
             <div>
               <p>
+                <h2 className='sr-only'>Khởi ý Từ Tâm</h2>
                 <strong>Khởi ý Từ Tâm:</strong> Nơi tầm nhìn gặp gỡ lòng người.
                 Mỗi viên gạch đầu tiên của Từ Tâm Medical được đặt xuống không
                 phải từ tham vọng đơn thuần, mà từ một ý niệm thuần khiết về sự
@@ -76,6 +77,7 @@ const Introduce = () => {
               </div>
               <div className='space-y-4'>
                 <p>
+                  <h2 className='sr-only'>Thực hiện Từ Tâm:</h2>
                   <strong>Thực hiện Từ Tâm:</strong> Biến triết lý thành hiện
                   thực sống động. Triết lý "Từ Tâm" không dừng lại ở ý tưởng, mà
                   được khắc họa rõ nét trong từng hành động, từng hơi thở của hệ
@@ -91,6 +93,7 @@ const Introduce = () => {
                   biến y đức thành một trải nghiệm sống động và đầy ý nghĩa.
                 </p>
                 <p>
+                  <h2 className='sr-only'>Thành tựu Từ Tâm:</h2>
                   <strong>Thành tựu Từ Tâm:</strong> Di sản của sự phục vụ bất
                   vụ lợi. Thành tựu của Tập đoàn Từ Tâm không đo đếm bằng những
                   con số khô khan, mà bằng sức khỏe, niềm tin và hạnh phúc được
@@ -109,6 +112,7 @@ const Introduce = () => {
             {/* Block 4 */}
             <div>
               <p>
+                <h2 className='sr-only'>Tập đoàn Y khoa Quốc tế Từ Tâm</h2>
                 Tại Tập đoàn Y khoa Quốc tế Từ Tâm, chúng tôi tin rằng sứ mệnh
                 của mình không chỉ là chữa bệnh, mà là nâng niu sự sống, thắp
                 sáng hy vọng, và gìn giữ giá trị thiêng liêng nhất của con

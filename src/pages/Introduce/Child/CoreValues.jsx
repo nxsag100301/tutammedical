@@ -13,14 +13,14 @@ const CoreValues = () => {
       <CustomBreadcrumb data={breadcrumbData} />
       <Reveal initialY={50} delay={0.2}>
         <div className='px-6 lg:px-20 my-8 space-y-4'>
-          <div className='font-bold text-2xl uppercase text-center text-primary-600'>
+          <h1 className='font-bold text-2xl uppercase text-center text-primary-600'>
             Giá trị cốt lõi
-          </div>
+          </h1>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
             <div className='text-justify space-y-2'>
               <div class='space-y-4 text-sm leading-relaxed'>
                 <div>
-                  <h3 class='text-lg font-semibold'>Từ Tâm</h3>
+                  <h2 class='text-lg font-semibold'>Từ Tâm</h2>
                   <p>
                     Chúng tôi đặt trái tim người bệnh làm trung tâm, mọi quyết
                     định đều bắt đầu từ lòng nhân ái và sự thấu hiểu.
@@ -28,7 +28,7 @@ const CoreValues = () => {
                 </div>
 
                 <div>
-                  <h3 class='text-lg font-semibold'>Chính Trực</h3>
+                  <h2 class='text-lg font-semibold'>Chính Trực</h2>
                   <p>
                     Trung thực trong chuyên môn, minh bạch trong dịch vụ. Uy tín
                     là nền tảng tạo nên niềm tin và sự gắn bó lâu dài.
@@ -36,7 +36,7 @@ const CoreValues = () => {
                 </div>
 
                 <div>
-                  <h3 class='text-lg font-semibold '>Cá Nhân Hóa</h3>
+                  <h2 class='text-lg font-semibold '>Cá Nhân Hóa</h2>
                   <p>
                     Mỗi người bệnh là một câu chuyện riêng. Chúng tôi lắng nghe
                     và thiết kế hành trình chăm sóc phù hợp với từng người.
@@ -44,19 +44,19 @@ const CoreValues = () => {
                 </div>
 
                 <div>
-                  <h3 class='text-lg font-semibold'>Kết Nối Liên Tục</h3>
+                  <h2 class='text-lg font-semibold'>Kết Nối Liên Tục</h2>
                   <p>
-                    Không chỉ là một lần khám – mà là cả một hành trình đồng
+                    Không chỉ là một lần khám - mà là cả một hành trình đồng
                     hành. Công nghệ và con người cùng phối hợp để giữ liên lạc
                     xuyên suốt giữa bác sĩ và bệnh nhân.
                   </p>
                 </div>
 
                 <div>
-                  <h3 class='text-lg font-semibold'>Tiện Lợi – Gần Gũi</h3>
+                  <h2 class='text-lg font-semibold'>Tiện Lợi - Gần Gũi</h2>
                   <p>
                     Phòng khám và nhà thuốc nằm ngay trong khu dân cư, thuận
-                    tiện cho mọi người dân tiếp cận y tế “Gần đây – Tình làng
+                    tiện cho mọi người dân tiếp cận y tế “Gần đây - Tình làng
                     nghĩa xóm”.
                   </p>
                 </div>

@@ -7,6 +7,7 @@ import {
   BreadcrumbSeparator
 } from '@/components/ui/breadcrumb'
 import Reveal from '../Reveal'
+import { Link } from 'react-router-dom'
 
 const CustomBreadcrumb = ({ data, image }) => {
   return (
@@ -29,8 +30,8 @@ const CustomBreadcrumb = ({ data, image }) => {
                 <React.Fragment key={index}>
                   <BreadcrumbItem>
                     {item.url ? (
-                      <BreadcrumbLink href={item.url}>
-                        {item.title}
+                      <BreadcrumbLink asChild>
+                        <Link to={item.url}>{item.title}</Link>
                       </BreadcrumbLink>
                     ) : (
                       <BreadcrumbLink>{item.title}</BreadcrumbLink>

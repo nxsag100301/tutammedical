@@ -13,9 +13,9 @@ const YTeTuTam = () => {
       <CustomBreadcrumb data={breadcrumbData} />
       <Reveal initialY={50} delay={0.2}>
         <div className='px-6 lg:px-20 my-8 space-y-4'>
-          <div className='font-bold text-2xl uppercase text-center text-primary-600'>
+          <h1 className='font-bold text-2xl uppercase text-center text-primary-600'>
             Y tế Từ Tâm - Nâng tầm Sức khỏe
-          </div>
+          </h1>
 
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <div>

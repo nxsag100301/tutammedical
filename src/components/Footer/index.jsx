@@ -158,7 +158,7 @@ const Footer = () => {
             {/* Thông tin liên hệ */}
             <div className='space-y-3 px-4 sm:px-6'>
               <p className='text-xl font-semibold'>Thông tin liên hệ</p>
-              <p className='font-semibold'>Từ Tâm Medical Global</p>
+              <h3 className='font-semibold'>Từ Tâm Medical Global</h3>
               <div>
                 <span className='font-semibold'>Email:</span>{' '}
                 tutammedical@gmail.com
@@ -174,9 +174,9 @@ const Footer = () => {
 
             {/* Mạng xã hội */}
             <div className='space-y-3 px-4 sm:px-6'>
-              <p className='text-xl font-semibold'>
+              <h3 className='text-xl font-semibold'>
                 Kết nối với Từ Tâm Medical
-              </p>
+              </h3>
               <div className='flex gap-4'>
                 <SiZalo className='h-9 w-9 border p-2 rounded-sm cursor-pointer' />
                 <FaFacebook className='h-9 w-9 cursor-pointer' />

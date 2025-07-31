@@ -28,16 +28,16 @@ const EducationTraditional = () => {
       <CustomBreadcrumb data={breadcrumbData} />
       <Reveal initialY={50} delay={0.2}>
         <div className='px-6 lg:px-20 my-10 space-y-8'>
-          <h2 className='font-bold text-2xl lg:text-3xl uppercase text-center text-primary-600'>
+          <h1 className='font-bold text-2xl lg:text-3xl uppercase text-center text-primary-600'>
             Giáo dục truyền thống
-          </h2>
+          </h1>
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 items-start'>
             <div className='space-y-6 text-justify'>
               <div id='ytetutam'>
-                <h3 className='font-semibold text-lg text-primary-700 mb-1'>
+                <h2 className='font-semibold text-lg text-primary-700 mb-1'>
                   Y tế Từ Tâm - Nâng tầm Sức khỏe
-                </h3>
+                </h2>
                 <p>
                   Câu này có nghĩa là: Khi dịch vụ y tế được thực hiện bằng cả
                   tấm lòng, sự tận tâm và lòng trắc ẩn ("Từ Tâm"), thì chất
@@ -49,9 +49,9 @@ const EducationTraditional = () => {
               </div>
 
               <div id='dieutritutam'>
-                <h3 className='font-semibold text-lg text-primary-700 mb-1'>
+                <h2 className='font-semibold text-lg text-primary-700 mb-1'>
                   Điều trị Từ Tâm - Nâng tầm Y Đức
-                </h3>
+                </h2>
                 <p>
                   Câu này muốn nói rằng: Phương pháp điều trị bệnh không chỉ
                   dừng lại ở kiến thức chuyên môn hay kỹ thuật, mà còn phải xuất
@@ -77,9 +77,9 @@ const EducationTraditional = () => {
             />
             <div className='space-y-6 text-justify'>
               <div id='chamsoctutam'>
-                <h3 className='font-semibold text-lg text-primary-700 mb-1'>
+                <h2 className='font-semibold text-lg text-primary-700 mb-1'>
                   Chăm sóc Từ Tâm - Nâng tầm Giá trị
-                </h3>
+                </h2>
                 <p>
                   Câu này có ý nghĩa: Việc chăm sóc bệnh nhân, người thân hay
                   những người cần giúp đỡ bằng sự quan tâm sâu sắc, tận tình và
@@ -91,9 +91,9 @@ const EducationTraditional = () => {
               </div>
 
               <div id='congdongtutam'>
-                <h3 className='font-semibold text-lg text-primary-700 mb-1'>
+                <h2 className='font-semibold text-lg text-primary-700 mb-1'>
                   Cộng đồng Từ Tâm - Nâng tầm Lan tỏa
-                </h3>
+                </h2>
                 <p>
                   Câu này nhấn mạnh: Khi một cộng đồng cùng nhau hành động với
                   tinh thần nhân ái, sẻ chia và lòng trắc ẩn ("Từ Tâm"), thì

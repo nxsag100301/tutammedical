@@ -13,9 +13,9 @@ const Mission = () => {
       <CustomBreadcrumb data={breadcrumbData} />
       <Reveal initialY={50} delay={0.2}>
         <div className='px-6 lg:px-20 my-8 space-y-4'>
-          <div className='font-bold text-2xl uppercase text-center text-primary-600'>
+          <h1 className='font-bold text-2xl uppercase text-center text-primary-600'>
             Sứ mệnh
-          </div>
+          </h1>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
             <div className='text-justify space-y-2'>
               <div>

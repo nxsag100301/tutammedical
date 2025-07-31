@@ -12,16 +12,16 @@ const InspirationOrigin = () => {
       <CustomBreadcrumb data={breadcrumbData} />
       <Reveal initialY={50} delay={0.2}>
         <div className='px-6 lg:px-20 my-10 space-y-10'>
-          <h2 className='font-bold text-2xl lg:text-3xl uppercase text-center text-primary-600'>
+          <h1 className='font-bold text-2xl lg:text-3xl uppercase text-center text-primary-600'>
             Khởi nguồn cảm hứng
-          </h2>
+          </h1>
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 items-start'>
             <div className='space-y-6 text-justify'>
               <div id='tutamkhoiy' className='space-y-4'>
-                <p className='font-semibold italic text-primary-700'>
+                <h2 className='font-semibold italic text-primary-700'>
                   "Từ Tâm mà Khởi ý, Từ Tâm mà Thực hiện, Từ Tâm mới Thành tựu"
-                </p>
+                </h2>
                 <p>
                   ...gói trọn triết lý sâu sắc và là kim chỉ nam tuyệt vời cho
                   một dự án trong ngành y tế. Nó không chỉ là một khẩu hiệu, mà
@@ -54,9 +54,9 @@ const InspirationOrigin = () => {
           </div>
 
           <div>
-            <h3 className='font-semibold text-lg text-primary-700 mb-1'>
+            <h2 className='font-semibold text-lg text-primary-700 mb-1'>
               "Từ Tâm mà Khởi ý" - Nguồn gốc của Tầm nhìn
-            </h3>
+            </h2>
             <p>
               <strong>Đạo đức và Y đức làm nền tảng:</strong> Ngành y tế khác
               với các ngành kinh doanh thông thường. Khởi ý từ "tâm" nghĩa là
@@ -81,9 +81,9 @@ const InspirationOrigin = () => {
             />
             <div className='space-y-6 text-justify'>
               <div id='tutamthuchien'>
-                <h3 className='font-semibold text-lg text-primary-700 mb-1'>
+                <h2 className='font-semibold text-lg text-primary-700 mb-1'>
                   "Từ Tâm mà Thực hiện" - Con đường tới Mục tiêu
-                </h3>
+                </h2>
                 <p>
                   <strong>Chất lượng và sự chuyên nghiệp:</strong> "Thực hiện từ
                   tâm" đòi hỏi phải đặt ra những tiêu chuẩn chất lượng cao nhất
@@ -106,9 +106,9 @@ const InspirationOrigin = () => {
               </div>
 
               <div id='tutamthanhtuu'>
-                <h3 className='font-semibold text-lg text-primary-700 mb-1'>
+                <h2 className='font-semibold text-lg text-primary-700 mb-1'>
                   "Từ Tâm mới Thành tựu" - Ý nghĩa của Sự thành công đích thực
-                </h3>
+                </h2>
                 <p>
                   <strong>Thành tựu toàn diện:</strong> Thành tựu không chỉ là
                   con số doanh thu, lợi nhuận, hay số lượng chi nhánh. Thành tựu

@@ -7,6 +7,7 @@ import Introduce from './Section/Introduce'
 const Home = () => {
   return (
     <div className=''>
+      <h1 className='sr-only'>Từ Tâm Medical</h1>
       <HomeCarousel />
       <Introduce />
       <InformationSection />
